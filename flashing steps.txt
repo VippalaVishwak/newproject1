@@ -1,0 +1,233 @@
+public class ExcelUtility {
+
+public static FileInputStream fi;
+public static FileOutputStream fo;
+public Static Workbook wb;
+public Static XSSFsheet ws;
+public Static XSSFRow row;
+public Static XSSFCell cell;
+public Static CellStyle Style;
+
+
+public static int getRowCount (String XFile, String Xsheet)
+{
+fi=new FileInputStream(XFile);
+wb = new Workbook(fi);
+ws = wb.getSheet("SheetName")
+int rowNum = ws.getLastRowNum();
+return RowNum;
+wb.close();
+fi.close();
+
+}
+
+
+public static int getCellCount (String XFile, String Xsheet, int rownum)
+{
+fi=new FileInputStream(XFile);
+wb = new Workbook(fi);
+ws = wb.getSheet("SheetName")
+rowNum = ws.getRowNum();
+int CellNum =rowNum.getLastCellNum();
+return CellNum;
+wb.close();
+fi.close();
+
+}
+
+public static String getCellData (String XFile, String Xsheet, int rowNum, int CellNum)
+{
+fi=new FileInputStream(XFile);
+wb = new Workbook(fi);
+ws = wb.getSheet("SheetName")
+rowNum = ws.getRowNum();
+CellNum =getLastCellNum();
+String data;
+try {
+data = CellNum.toString(); 
+DataFormatter db = new DataFormatter();
+data = db.formatCellValue(CellNum);
+}
+
+catch (Exception e)
+{
+data = "";
+}
+return data; 
+
+wb.close();
+fi.close();
+
+}
+
+public static void SetCellData (String XFile, String Xsheet, int rowNum, int CellNum)
+{
+fi=new FileInputStream();
+wb = new Workbook(fi);
+ws = wb.getSheet("SheetName")
+rowNum = ws.getRowNum();
+CellNum =rowNum.createCell(-----);
+CellNum.setCellValue(data)
+fo = newFileOutputStream ();
+wb.write(fo)
+wb.close();
+fi.close();
+fo.close();
+}
+
+public static void FillGreenColour (String XFile, String Xsheet, int rowNum, int CellNum)
+{
+fi=new FileInputStream();
+wb = new Workbook(fi);
+ws = wb.getSheet("SheetName")
+rowNum = ws.getRowNum();
+CellNum = ws.getCellNum();
+Style= wb.createCellStyle
+Style.SetFillForegroundColour(Indexcolours.Green.getindex())
+Style.SetFillPattern(FillPatternType.SOLID.FOREGROUND)
+
+CellNum.setCellValue(data)
+fo = newFileOutputStream ();
+wb.write(fo)
+wb.close();
+fi.close();
+fo.close();
+}
+
+public static void FillRedColour (String XFile, String Xsheet, int rowNum, int CellNum)
+{
+fi=new FileInputStream();
+wb = new Workbook(fi);
+ws = wb.getSheet("SheetName")
+rowNum = ws.getRowNum();
+CellNum = rowNum.getCellNum()
+Style =wb.createCellStyle()
+
+Style.SetFillForegroundColour(Indexcolours.RED.getindex())
+Style.SetFillPattern(FillPatternType.SOLID.FOREGROUND)
+CellNum.setCellValue(data)
+fo = newFileOutputStream ();
+wb.write(fo)
+wb.close();
+fi.close();
+fo.close();
+}
+
+String file = FileInputStream(System.setProperty("User.dir" + "\\path")
+
+int rows = ExcelYtility.getRowNum(File,Sheet1);
+
+for (int r=0;r<=rows;r++)
+{
+//get cell data
+
+String cell1 = ExcelUtility.getCellData(file,sheet1,i,1)
+String cell2 = ExcelUtility.getCellData(file,sheet1,i,2)
+String cell3 = ExcelUtility.getCellData(file,sheet1,i,3)
+String cell4 = ExcelUtility.getCellData(file,sheet1,i,4)
+String cell5 = ExcelUtility.getCellData(file,sheet1,i,5)
+
+// pass info to app by find and sedkeys
+
+findElement(By.xpath("").sendKeys(cell1);
+findElement(By.xpath("").sendKeys(cell2);
+findElement(By.xpath("").sendKeys(cell3);
+findElement(By.xpath("").sendKeys(cell4);
+findElement(By.xpath("").sendKeys(cell5);
+click();
+
+//validation
+
+Find the output element.getText() = actual_value
+
+if (Double.parseDouble(exp_value)==Double.parseDouble(actual_value)
+{
+
+ExcelUtility.setCellData(Xfile,"sheet1",i,"Test pass")
+ExcelUtility.FillGreenColour(Xfile. "Sheet1",i 5)
+}
+else
+{
+
+ExcelUtility.setCellData(Xfile,"sheet1",i,"Test Fail")
+ExcelUtility.FillRedColour(Xfile. "Sheet1",i 5)
+}
+
+}
+
+
+
+Reading data from excel file
+
+FileInputStream file = new FileInputStream();
+XSSFWorkbook wb = newWorkbook(file);
+XSSFSheet s = wb.getSheet("Sheet1");
+int row = s.getLastRowNum();
+int cell =row.getRow(0).getLastCellNum();
+
+
+for (int r =0;r<=row;r++)
+{
+
+int current_row = s.getRow(r)
+{
+for (int c=0;c<cell;c++)
+{
+
+int current_cell = row.getCell(c);
+
+String sai =cell.toString();
+System.out.println(sai)
+}
+}
+}
+
+
+
+
+Writing data from excel file
+
+FileOutputStream file = new FileOutputStream();
+XSSFWorkbook wb = newWorkbook(file);
+XSSFSheet s = wb.CreateSheet("Sheet1");
+
+int row1 = s.creteRowNum(1);
+
+row.createCell(0).setCellValue();
+row.createCell(1).setCellValue();
+row.createCell(2).setCellValue();
+row.createCell(3).setCellValue();
+
+int row2 = s.creteRowNum(2);
+
+row.createCell(0).setCellValue();
+row.createCell(1).setCellValue();
+row.createCell(2).setCellValue();
+row.createCell(3).setCellValue();
+
+int row3 = s.creteRowNum(3);
+row.createCell(0).setCellValue();
+row.createCell(1).setCellValue();
+row.createCell(2).setCellValue();
+row.createCell(3).setCellValue();
+
+FileInputStream file = new FileInputStream();
+XSSFWorkbook wb = newWorkbook(file);
+XSSFSheet s = wb.getSheet("Sheet1");
+int rowNum = s.getRow();
+int cell = rowNum.getCell();
+for (int r =0;r<=row;r++)
+{
+
+int current_row = s.getRow(r)
+{
+for (int c=0;c<cell;c++)
+{
+
+int current_cell = row.getCell(c);
+
+String sai =cell.toString();
+System.out.println(sai)
+}
+}
+}
